@@ -14,7 +14,7 @@ st.set_page_config(
 # -----------------------------
 # Load Model
 # -----------------------------
-model = joblib.load("model/model.pkl")   # Change to "model.pkl" if your file is in root
+model = joblib.load("model.pkl")   # Change to "model.pkl" if your file is in root
 
 # -----------------------------
 # Sidebar
