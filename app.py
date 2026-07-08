@@ -6,7 +6,7 @@ st.set_page_config(page_title="Fraud Detection", layout="wide")
 
 st.title("Smart Credit Card Fraud Investigation")
 
-model = joblib.load("model/model.pkl")
+model = joblib.load("model.pkl")
 
 uploaded = st.file_uploader("Upload creditcard.csv", type=["csv"])
 
