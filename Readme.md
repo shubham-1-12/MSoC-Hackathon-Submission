@@ -1,196 +1,146 @@
-# Smart Credit Card Fraud Investigation
+# FraudShield AI
 
-## MSoC 2026 Hackathon Submission
+AI-Powered Credit Card Fraud Detection Dashboard
 
-### Team: Draev Devs
+FraudShield AI is a machine learning web application developed for the MSoC 2026 Hackathon. It helps identify potentially fraudulent credit card transactions by analyzing uploaded transaction data and assigning a fraud prediction with a risk score.
 
-Team Members:
+---
+
+## Team
+
+**Team Name:** Draev Devs
+
+**Members**
 - Shubham Vishwakarma
 - Tejas Shah
 
 ---
 
-## Overview
+## Live Demo
 
-Smart Credit Card Fraud Investigation is a machine learning-based fraud detection system designed to identify suspicious credit card transactions and assist investigators through automated risk scoring.
-
-The system analyzes transaction patterns, predicts whether a transaction is fraudulent, and assigns a risk score to help prioritize investigation.
+**Application:** https://fraudshieldx.streamlit.app
 
 ---
 
-## Problem Statement
+## Features
 
-Credit card fraud is a continuously evolving problem. Traditional rule-based detection systems struggle to identify new fraud patterns and often generate a high number of false positives.
-
-The objective of this project is to build an intelligent fraud detection pipeline that can:
-
-- Detect fraudulent transactions accurately.
-- Reduce false positive rates.
-- Generate risk scores for transaction prioritization.
-- Provide an easy-to-use investigation dashboard.
-
----
-
-## Key Features
-
-- Machine learning based fraud classification.
-- Random Forest classification model.
-- Continuous risk score generation (0-100).
-- CSV-based batch transaction analysis.
-- Streamlit-based interactive dashboard.
-- Model evaluation and performance reporting.
-- Retrainable ML pipeline.
+- AI-powered fraud detection
+- Batch CSV transaction analysis
+- Fraud probability (Risk Score)
+- Interactive Streamlit dashboard
+- Downloadable prediction results
+- Random Forest machine learning model
+- Simple and intuitive interface
 
 ---
 
 ## Technology Stack
 
-Programming Language:
+### Frontend
+- Streamlit
+
+### Backend
 - Python
 
-Libraries:
+### Machine Learning
+- Scikit-learn
+- Random Forest Classifier
+
+### Libraries
 - Pandas
 - NumPy
-- Scikit-learn
-- Streamlit
 - Joblib
-
-Machine Learning:
-- Random Forest Classifier
 
 ---
 
 ## Project Structure
 
 ```
-Fraud-Detection/
+FraudShield-AI/
 │
-├── app.py                 # Streamlit dashboard
-├── train.py               # Model training pipeline
-├── requirements.txt       # Dependencies
-├── RESULTS.md             # Model evaluation results
+├── app.py
+├── train.py
+├── requirements.txt
 ├── README.md
-│
-├── model/
-│   └── model.pkl          # Trained model
-│
-└── data/
-    └── creditcard.csv     # Dataset (download separately)
+├── RESULTS.md
+├── .gitignore
+├── model.pkl
+```
+
+---
+
+## How It Works
+
+1. Upload a CSV file containing transaction data.
+2. The application preprocesses the data.
+3. The trained Random Forest model analyzes every transaction.
+4. Fraud predictions and risk scores are generated.
+5. Results can be downloaded as a CSV file.
+
+---
+
+## Installation
+
+Clone the repository
+
+```bash
+git clone <repository-url>
+cd FraudShield-AI
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the application
+
+```bash
+streamlit run app.py
 ```
 
 ---
 
 ## Dataset
 
-Dataset Used:
+The model was trained using the **Credit Card Fraud Detection Dataset** by the ULB Machine Learning Group and Worldline.
 
-Credit Card Fraud Detection Dataset  
-Source: Kaggle - ULB Machine Learning Group and Worldline
-
-The dataset is not included in this repository due to GitHub file size limitations.
-
-To run the project:
-
-1. Download the dataset.
-2. Place the file at:
-
-```
-data/creditcard.csv
-```
-
-Dataset Details:
-
-- 284,807 transactions
-- 30 input features
-- Binary classification problem
-- Highly imbalanced fraud distribution
-
----
-
-## Machine Learning Approach
-
-### Model
-
-Random Forest Classifier
-
-### Reason for Selection
-
-Random Forest was selected because:
-
-- It performs well on tabular datasets.
-- It handles complex feature relationships.
-- It provides reliable classification performance.
-- It supports fast inference.
+The dataset is **not included** in this repository due to licensing and file size considerations.
 
 ---
 
 ## Model Performance
 
-Evaluation was performed on a held-out test dataset.
-
 | Metric | Score |
-|---|---:|
+|---------|------:|
 | Precision | 90.59% |
 | Recall | 78.57% |
 | F1 Score | 84.15% |
 | PR-AUC | 86.29% |
 
-Confusion Matrix:
-
-| | Predicted Legitimate | Predicted Fraud |
-|-|-:|-:|
-| Actual Legitimate | 56856 | 8 |
-| Actual Fraud | 21 | 77 |
-
----
-
-## Running the Project
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Train the Model
-
-```bash
-python train.py
-```
-
-### Run the Dashboard
-
-```bash
-python -m streamlit run app.py
-```
-
----
-
-## Dashboard Workflow
-
-1. Upload transaction CSV file.
-2. System processes transaction features.
-3. Machine learning model predicts fraud probability.
-4. Dashboard displays:
-   - Fraud prediction
-   - Risk score
-   - Transaction analysis
-
 ---
 
 ## Future Improvements
 
-Future versions can include:
-
-- Explainable AI using SHAP/LIME.
-- Real-time fraud detection API.
-- Graph-based fraud ring detection.
-- Cloud deployment.
-- Continuous model retraining.
-- Advanced anomaly detection techniques.
+- Real-time transaction monitoring
+- Explainable AI (SHAP/LIME)
+- REST API integration
+- User authentication
+- Dashboard analytics and charts
+- Cloud database integration
+- Multi-model ensemble learning
 
 ---
 
 ## License
 
 This project was developed for educational and hackathon purposes.
+
+---
+
+## Developed By
+
+**Draev Devs**
+
+MSoC 2026 Hackathon
